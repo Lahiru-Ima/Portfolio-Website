@@ -11,7 +11,14 @@ const HeroSection = () => {
     });
   };
 
-  const downloadCVClickHandler = () => {};
+  const downloadCVClickHandler = () => {
+    const link = document.createElement("a");
+    link.href = "/cv.pdf";
+    link.download = "Lahiru_Munasinghe_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="home">
