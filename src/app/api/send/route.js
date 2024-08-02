@@ -1,17 +1,23 @@
-// import { EmailTemplate } from '../../../components/EmailTemplate';
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
 
-export async function POST(req, res) {
-  const { body } = await req.json();
-  const { email, subject, message } = body;
+export async function POST(req) {
   try {
+    const body = await req.json();
+    console.log("Request Body:", body); // Log the request body for debugging
+
+    const { email, subject, message } = body;
+
+    if (!email || !subject || !message) {
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    }
+
     const data = await resend.emails.send({
       from: fromEmail,
-      to: ["lahiruimansha@gmail.com", email],
+      to: [email],
       subject: subject,
       react: (
         <>
@@ -23,8 +29,11 @@ export async function POST(req, res) {
       ),
     });
 
-    return Response.json(data);
+    console.log("Email sent successfully:", data); // Log the success response
+
+    return NextResponse.json(data);
   } catch (error) {
-    return Response.json({ error });
+    console.error("Error sending email:", error); // Log errors
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

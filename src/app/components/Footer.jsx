@@ -6,7 +6,7 @@ const Footer = () => {
 
       <div className="flex flex-col footer footer-center items-center justify-center p-3">
         <div className="text-center">
-          <p className="mb-2">Crafted with <span role="img" aria-label="love">❤️</span> by Lahiru</p>
+          <p className="mb-2">Designed & Developed with <span role="img" aria-label="love">❤️</span> by Lahiru</p>
          
         </div>
        

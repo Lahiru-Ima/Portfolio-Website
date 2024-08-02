@@ -18,11 +18,11 @@ const ProjectCard = ({
           className="w-full h-full rounded-t-xl bg-cover bg-center"
           style={{ backgroundImage: `url(${imgUrl})` }}
         >
-          <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
+          {/* <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
             <Link href={github}>
               <CodeBracketIcon className="w-10 h-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:text-white" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="flex flex-col justify-between flex-1 rounded-b-xl bg-[#1e1e1e]">
