@@ -75,10 +75,10 @@ const HeroSection = () => {
           </div>
           <div className="col-span-5">
             <Image
-              src="/images/hero-image.png"
+              src="https://gist.github.com/user-attachments/assets/a23496e0-c879-494e-9e17-c10a1d6071e4"
               alt="hero image"
-              width={200}
-              height={200}
+              width={160}
+              height={160}
               className="w-full"
             />
           </div>
