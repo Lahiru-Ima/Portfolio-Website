@@ -1,4 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "gist.github.com",
+        pathname: "/user-attachments/assets/**",
+      },
+    ],
+  },
+};
 
 export default nextConfig;

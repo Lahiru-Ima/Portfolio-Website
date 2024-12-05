@@ -8,7 +8,7 @@ const AboutSection = () => {
         <h1 className="text-4xl font-bold mb-14 ">About Me</h1>
         <div className="md:grid md:grid-cols-2 gap-4 items-center py-0 px-2 xl:gap-6 sm:py-10 ">
           <Image
-            src="/images/about-image.jpg"
+            src="https://gist.github.com/user-attachments/assets/fd8afcf0-8b11-4807-a4da-295ce564c99f"
             alt="hero image"
             width={500}
             height={500}
